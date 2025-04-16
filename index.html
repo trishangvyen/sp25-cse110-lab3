@@ -5,20 +5,20 @@
     <meta charset="utf-8" />
     <link rel="icon" href="/assets/favicon-16x16.png" />
   </head>
-  <header>
-    <h1>General Meeting #19 Minutes</h1>
-    <h2>Discussing what's next</h2>
-    <time>4/15/2025 8:00PM</time>
-    <a class="logo" href="/assets/624e15247e6dfdf2cdddd6093e6ee96e.jpg"><em>(Me if you're late)</em></a>
-  </header>
-  <main>
-    <p>
-        Present: Trisha, Madison, Allison, Mariah <br>
-        Late: None, yay! <br>
-        Absent: None
-    </p>
-  </main>
   <body>
+    <header>
+      <h1>General Meeting #19 Minutes</h1>
+      <h2>Discussing what's next</h2>
+      <time>4/15/2025</time>
+      <a class="logo" href="/assets/624e15247e6dfdf2cdddd6093e6ee96e.jpg"><em>(Me if you're late)</em></a>
+    </header>
+    <main>
+      <p>
+          Present: Trisha, Madison, Allison, Mariah <br>
+          Late: None, yay! <br>
+          Absent: None
+      </p>
+    </main>
     <h2>Jump to:</h2>
     <nav>
         <ul>
@@ -46,7 +46,7 @@
         <h4>
             This week's events:
         </h4>
-        <img class="This Week"
+        <img class="thisweek"
         src="/assets/Screen Shot 2025-04-15 at 7.38.52 PM.png"
         alt="This week's events"
         style="width: 800px; height: auto;" />
@@ -80,12 +80,12 @@
         <audio controls src="/assets/IMG_0679audio.m4a"></audio>
     </details>
     <h3>Attendance Form</h3>
-    <form action="" method="get" class="attendance">
+    <form action="#" method="get" class="attendance">
         <fieldset>
             <legend>Get credit for attendance here!</legend>
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" required/> <br>
-        <input type="checkbox" required/>
+        <input type="checkbox" id="checkbox" required/>
         <label for="checkbox">I added the events to my calendar</label> <br>
         <label><b>Yes or No for Madison to be taken off probation status:</b></label>
         <input type="radio" id="Yes" name="voting" value="Yes"/>
@@ -101,7 +101,7 @@
             min="2025-04-15"
             max="2025-12-31"
         /> <br>
-        <label for="list">What's your favorite college?</label>
+        <label for="college-choice">What's your favorite college?</label>
         <input list="colleges" id="college-choice" name="college-choice" />
         <datalist id="colleges">
             <option value="Revelle"></option>
@@ -114,7 +114,7 @@
             <option value="Eighth"></option>
         </datalist>
         <br>
-        <label for="drink">Choose what drink you'd like:</label>
+        <label for="drink-select">Choose what drink you'd like:</label>
         <select name="drink" id="drink-select">
             <option value="">Select an option</option>
             <option value="Milk Tea w/ Boba">Milk Tea w/ Boba</option>
@@ -128,8 +128,8 @@
         </fieldset>
     </form>
     <button type="button">This does nothing</button>
+    <footer>
+        <p><i>Made by Trisha Nguyen</i></p>
+      </footer>
   </body>
-  <footer>
-    <p><i>Made by Trisha Nguyen</i></p>
-  </footer>
 </html>
