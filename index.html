@@ -5,19 +5,23 @@
     <meta charset="utf-8" />
     <link rel="icon" href="assets/favicon-16x16.png" />
     <link rel="stylesheet" href="mystyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>General Meeting #19 Minutes</h1>
-      <h2>Discussing what's next</h2>
-      <time>2025-04-15</time>
-      <a class="logo" href="assets/624e15247e6dfdf2cdddd6093e6ee96e.jpg"><em>(Me if you're late)</em></a>
+      <hr/>
+        <p class="date">Date: <b>2025-04-15</b></p>
+    <h2 style="display: inline;">Topic: </h2> <p class="topic" style="display: inline;">Attendance and Upcoming Events</p>
     </header>
     <main>
       <p>
-          Present: Trisha, Madison, Allison, Mariah <br>
-          Late: None, yay! <br>
-          Absent: None
+        <a class="logo" href="assets/624e15247e6dfdf2cdddd6093e6ee96e.jpg"><em>(Me if you're late)</em></a> <br>
+          <b>Present:</b> Trisha, Madison, Allison, Mariah <br>
+          <b>Late:</b> None, yay! <br>
+          <b>Absent:</b> None
       </p>
     </main>
     <h2>Jump to:</h2>
@@ -74,13 +78,12 @@
     </ul>
     <details>
         <summary><b>Recorded Meeting</b> <i>(video & audio)</i></summary>
-        <video controls width="250">
+        <video controls width="250" id ="video-player">
             <source src="assets/IMG_0679.mov"/>
         </video> <br>
         <p>Audio only:</p>
         <audio controls src="assets/IMG_0679audio.m4a"></audio>
     </details>
-    <h3>Attendance Form</h3>
     <form action="#" method="get" class="attendance">
         <fieldset>
             <legend>Get credit for attendance here!</legend>
@@ -96,7 +99,7 @@
         <label for="Birthday">When's my Birthday?</label>
         <input
             type="date"
-            id="Birthday"
+            id="bdaydate"
             name="Birthday"
             value="2025-04-15"
             min="2025-04-15"
@@ -125,7 +128,7 @@
         <br>
         <label for="questions"><i>Any other questions?</i></label> <br>
         <textarea id="questions" name="questions" rows="2" cols="33"></textarea> <br>
-        <input type="submit" value="Submit" />
+        <input id = "submit" type="submit" value="Submit" />
         </fieldset>
     </form>
     <button type="button">This does nothing</button>
