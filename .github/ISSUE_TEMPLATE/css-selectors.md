@@ -2,7 +2,7 @@
 name: CSS Selectors
 about: Use at least one of every bulleted selector method
 title: ''
-labels: ''
+labels: task
 assignees: trishangvyen
 
 ---

@@ -2,7 +2,7 @@
 name: Add General CSS Topics
 about: Go through the checklist and add every item
 title: ''
-labels: ''
+labels: enhancement, task
 assignees: trishangvyen
 
 ---

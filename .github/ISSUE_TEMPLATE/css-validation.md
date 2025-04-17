@@ -2,8 +2,8 @@
 name: CSS Validation
 about: Validate your CSS through a validator and take a screenshot
 title: ''
-labels: ''
-assignees: ''
+labels: enhancement
+assignees: trishangvyen
 
 ---
 
