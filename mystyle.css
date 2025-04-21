@@ -2,6 +2,11 @@
     --primary-color: rgb(255, 99, 190);
 }
 
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
 html { /* set font for the entire document */
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -26,7 +31,14 @@ h1 {
 }
 h2 {
     font-size: 200;
+}
 
+.thisweek {
+    font-size: 1.8vh;
+    margin-top: 0;
+    color: color(color-mix(in srgb, rgb(255, 99, 190), rgb(255, 23, 139)) lightness(50%));
+    font-weight: 500;
+    text-align: center;
 }
 
 p {
@@ -51,6 +63,14 @@ a:hover {
 }
 nav ul li::marker {
     color: rgb(255, 99, 190); /* color for nav list bullet points */
+    margin-bottom: 0cm;
+}
+
+/* Class Selector */
+.highlight {
+    background-color: rgb(255, 239, 250);
+    padding: 5px;
+    border-radius: 3px;
 }
 
 .topic {
@@ -66,6 +86,15 @@ img {
     width: auto;
     height: auto;
     border-radius: 10px; /* round corners for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.event {
+    text-align: center;
 }
 
 .attendance {
@@ -77,7 +106,19 @@ img {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    & h3 {
+        font-size: 1.5em;
+        color: rgb(255, 99, 190);
+    }
+
+    & p {
+        font-size: 1em;
+        color: rgb(36, 36, 36);
+    }
 }
+
+/* Video and Audio Player */
 
 details{
     background-color: #fff0f7;
@@ -109,6 +150,167 @@ audio {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Attendance Form */
+
+legend{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: rgb(255, 99, 190);
+    margin-bottom: 10px;
+}
+
+
+#name {
+    width: 200px;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 99, 190);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+#name:hover {
+    border-color: rgb(212, 0, 106);
+}
+
+/* ID Selector */
+#special-button {
+    background-color: rgb(255, 99, 190);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#special-button:hover {
+    background-color: rgb(255, 23, 139);
+}
+
+label {
+    font-weight: 500;
+    color: rgb(36, 36, 36);
+    margin: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#Yes, #No {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+#Yes, #No:hover {
+    cursor: pointer;
+}
+
+#bdaydate {
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 99, 190);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+#bdaydate:hover {
+    border-color: rgb(212, 0, 106);
+    cursor: pointer;
+}
+
+#college-choice {
+    width: 180px;
+    height: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 99, 190);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    margin: 10px 10px 10px 10px;
+}
+#college-choice:hover {
+    border-color: rgb(212, 0, 106);
+    cursor: textpointer;
+}
+
+#drink-select {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 99, 190);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    margin: 10px 10px 10px 10px;
+}
+#drink-select:hover {
+    border-color: rgb(212, 0, 106);
+    cursor: pointer;
+}
+
+#questions {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 99, 190);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    border: 2px solid rgb(255, 99, 190);
+    padding: 5px;
+    border-radius: 5px;
+}
+input[type="text"]:focus {
+    border-color: rgb(212, 0, 106);
+}
+
+#submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(255, 99, 190);
+    color: white;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
+}
+#submit:hover {
+    background-color: rgb(255, 23, 139);
+    color: white;
+    cursor: pointer;
+}
+
+/* bottom part of the page */
+
+button {
+    background-color: var(--primary-color, rgb(200, 200, 200));
+    color: white;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+button:hover {
+    background-color: rgb(255, 23, 139);
+    color: white;
+    cursor: pointer;
+}
+
+button.primary {
+    background-color: rgb(255, 99, 190);
+    color: white;
+    font-weight: bold;
+}
+
 footer {
     text-align: center;
     margin-top: 20px;
@@ -119,4 +321,30 @@ footer {
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 5px 0;
+}
+
+ul > li {
+    font-size: 1em;
+    color: rgb(36, 36, 36);
+}
+
+h1 ~ p {
+    font-size: 1.2em;
+    color: gray;
+}
+
+h1 + h2 {
+    margin-top: 10px;
+    color: rgb(255, 155, 213);
+}
+
+form:has(input[type="submit"]) {
+    border: 2px solid rgb(255, 99, 190);
+    padding: 20px;
+    border-radius: 20px;
 }
