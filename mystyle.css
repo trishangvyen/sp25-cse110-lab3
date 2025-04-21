@@ -1,0 +1,122 @@
+:root {
+    --primary-color: rgb(255, 99, 190);
+}
+
+html { /* set font for the entire document */
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    margin: 1.2em;
+    line-height: 1.5;
+    padding: 0;
+    background-color: #fff0f7;
+    color: rgb(36, 36, 36);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin: 10;
+    color: rgb(255, 155, 213);
+}
+h1 {
+    font-size: 2.5em;
+    margin-top: 10;
+}
+h2 {
+    font-size: 200;
+
+}
+
+p {
+    font-weight: 400;
+    margin: 10;
+    color: rgb(36, 36, 36);
+}
+
+list {
+    font-weight: 400;
+    margin: 10;
+    color: rgb(36, 36, 36);
+}
+a {
+    color: rgb(255, 99, 190);
+    text-decoration: none;
+    position: relative;
+}
+a:hover {
+    color: rgb(255, 23, 139);
+    text-decoration: underline;
+}
+nav ul li::marker {
+    color: rgb(255, 99, 190); /* color for nav list bullet points */
+}
+
+.topic {
+    font-weight: 500;
+    font-size: 1.4em;
+    color: gray;
+    margin: 10;
+}
+
+img {
+    max-width: 100%;
+    min-width: none;
+    width: auto;
+    height: auto;
+    border-radius: 10px; /* round corners for images */
+}
+
+.attendance {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    background-color: #fff0f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+details{
+    background-color: #fff0f7;
+    padding: 20px;
+    border-radius: 10px; 
+    margin-bottom: 20px;
+}
+details summary {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: hsl(330, 100%, 75%);
+    cursor: pointer;
+}
+
+#video-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff0f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+audio {
+    position: static;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(255, 209, 236);
+    color: white;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
