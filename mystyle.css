@@ -96,6 +96,7 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: auto;
     justify-items: stretch;
+    font-size: 1.8vh;
 }
 
 /* Video and Audio Player */
@@ -112,7 +113,7 @@ details{
 }
 details summary {
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 2vh;
     color: hsl(330, 100%, 75%);
     cursor: pointer;
 }
