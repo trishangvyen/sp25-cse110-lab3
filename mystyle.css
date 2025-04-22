@@ -2,9 +2,8 @@
     --primary-color: rgb(255, 99, 190);
 }
 
-/* Universal Selector */
 * {
-    box-sizing: border-box;
+    margin: 5px;
 }
 
 html { /* set font for the entire document */
@@ -20,6 +19,13 @@ body {
     background-color: #fff0f7;
     color: rgb(36, 36, 36);
 }
+
+@media (max-width: 600px) {
+    body {
+        margin: 2em;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     margin: 10;
@@ -35,7 +41,7 @@ h2 {
 
 .thisweek {
     font-size: 1.8vh;
-    margin-top: 0;
+    margin-top: 1vw;
     color: color(color-mix(in srgb, rgb(255, 99, 190), rgb(255, 23, 139)) lightness(50%));
     font-weight: 500;
     text-align: center;
@@ -43,7 +49,7 @@ h2 {
 
 p {
     font-weight: 400;
-    margin: 10;
+    margin: auto;
     color: rgb(36, 36, 36);
 }
 
@@ -61,23 +67,15 @@ a:hover {
     color: rgb(255, 23, 139);
     text-decoration: underline;
 }
-nav ul li::marker {
-    color: rgb(255, 99, 190); /* color for nav list bullet points */
-    margin-bottom: 0cm;
-}
-
-/* Class Selector */
-.highlight {
-    background-color: rgb(255, 239, 250);
-    padding: 5px;
-    border-radius: 3px;
+nav:has(ul) {
+    font-style: italic;
 }
 
 .topic {
     font-weight: 500;
     font-size: 1.4em;
     color: gray;
-    margin: 10;
+    padding: 10px 0px 0px 0px;
 }
 
 img {
@@ -94,33 +92,19 @@ img {
 }
 
 .event {
-    text-align: center;
-}
-
-.attendance {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    background-color: #fff0f7;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    & h3 {
-        font-size: 1.5em;
-        color: rgb(255, 99, 190);
-    }
-
-    & p {
-        font-size: 1em;
-        color: rgb(36, 36, 36);
-    }
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    justify-items: stretch;
 }
 
 /* Video and Audio Player */
 
 details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: auto;
     background-color: #fff0f7;
     padding: 20px;
     border-radius: 10px; 
@@ -134,12 +118,9 @@ details summary {
 }
 
 #video-player {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: #fff0f7;
     padding: 20px;
+    margin: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -152,6 +133,24 @@ audio {
 
 /* Attendance Form */
 
+.attendance {
+    margin: auto;
+    height: 100%;
+    background-color: #fff0f7;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    & label {
+        font-size: 2vh;
+        font-weight: 500;
+        color: rgb(36, 36, 36);
+    }
+}
+
 legend{
     font-weight: 600;
     font-size: 1.5em;
@@ -159,9 +158,19 @@ legend{
     margin-bottom: 10px;
 }
 
+fieldset {
+    border: 2px solid rgb(255, 99, 190);
+    display: inline;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff0f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 #name {
-    width: 200px;
+    width: auto;
     height: fit-content;
     padding: 10px;
     border-radius: 5px;
@@ -169,13 +178,15 @@ legend{
     font-family: "Montserrat", sans-serif;
     font-size: 1em;
     margin-bottom: 10px;
-}
-#name:hover {
-    border-color: rgb(212, 0, 106);
+    & :hover {
+        border-color: color(srgb rgb(255, 99, 190) rgb(255, 23, 139) rgb(255, 23, 139) lightness(50%));
+    }
+    & :focus {
+        border-color: rgb(212, 0, 106);
+    }
 }
 
-/* ID Selector */
-#special-button {
+#checkbox {
     background-color: rgb(255, 99, 190);
     color: white;
     padding: 10px 20px;
@@ -183,8 +194,10 @@ legend{
     border-radius: 5px;
     cursor: pointer;
 }
-#special-button:hover {
+#checkbox:hover {
     background-color: rgb(255, 23, 139);
+    color: white;
+    cursor: pointer;
 }
 
 label {
@@ -221,8 +234,8 @@ label {
 }
 
 #college-choice {
-    width: 180px;
-    height: 10px;
+    width: autp;
+    height: auto;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid rgb(255, 99, 190);
@@ -291,7 +304,7 @@ input[type="text"]:focus {
 button {
     background-color: var(--primary-color, rgb(200, 200, 200));
     color: white;
-    margin-top: 10px;
+    margin-top: 0.2in;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -303,6 +316,12 @@ button:hover {
     background-color: rgb(255, 23, 139);
     color: white;
     cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(255, 23, 139);
+    color: white;
+    transform: translateY(2px);
 }
 
 button.primary {
@@ -341,10 +360,4 @@ h1 ~ p {
 h1 + h2 {
     margin-top: 10px;
     color: rgb(255, 155, 213);
-}
-
-form:has(input[type="submit"]) {
-    border: 2px solid rgb(255, 99, 190);
-    padding: 20px;
-    border-radius: 20px;
 }
